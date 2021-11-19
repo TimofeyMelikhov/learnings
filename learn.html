@@ -1452,15 +1452,26 @@
   // let str = firstFunc('Макс')
   // str('здарова');
 
-  function giveAGift(give) {
-    return function () {
-      setTimeout(() => {
-        console.log('Вы подарили', give);
-      }, 2000)
-    }
-  }
-  let giveLater = giveAGift('деньги')
+  // function giveAGift(give) {
+  //   return function () {
+  //     setTimeout(() => {
+  //       console.log('Вы подарили', give);
+  //     }, 2000)
+  //   }
+  // }
+  // let giveLater = giveAGift('деньги')
 
-  console.log('Через 2 секунды вы подарите кому то подарок');
-  giveLater()
+  // console.log('Через 2 секунды вы подарите кому то подарок');
+  // giveLater()
+
+  function tribonacci(arr) {
+    let resultArr = [];
+    for(i = 0; i < arr.length; i++) {
+      let step = arr.slice(0, 3);
+      let some = step.reduce((acc, item) => acc + item);
+      resultArr.push(...arr, some)
+    }
+    return resultArr
+  }
+  console.log(tribonacci([1, 1, 1]));
 </script>
