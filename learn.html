@@ -1480,4 +1480,15 @@
   //   }
   // }
   // console.log(maxName);
+
+  //Переместите первую букву каждого слова в его конец, затем добавьте «ау» в конец слова. Не трогайте знаки препинания.
+  function pigIt(str) {
+    let arrFromStr = str.split(' ');
+    let modifiedStr = arrFromStr.map(el => {
+      return el.substring(1, el.length) + el.substring(0, 1) + 'ay'
+    }).join(' ')
+    return modifiedStr;
+  }
+  console.log(pigIt('Hello world'));
+  console.log(pigIt('Pig latin is cool'));
 </script>
