@@ -1464,15 +1464,20 @@
   // console.log('Через 2 секунды вы подарите кому то подарок');
   // giveLater()
 
-  //Трибоначи
-  function tribonacci(arr) {
-    let resultArr = [];
-    for(i = 0; i < arr.length; i++) {
-      let step = arr.slice(0, 3);
-      let some = step.reduce((acc, item) => acc + item);
-      resultArr.push(...arr, some)
-    }
-    return resultArr
-  }
-  console.log(tribonacci([1, 1, 1]));
+  //Имя самого высокооплачиваемого сотрудника. Решение через деструктуризацию
+  // let salaries = {
+  //   "John": 100,
+  //   "Pete": 300,
+  //   "Mary": 250
+  // };
+  // let max = 0;
+  // let maxName = null;
+  // let arr = Object.entries(salaries);
+  // for (let [name, salary] of arr) {
+  //   if(max < salary) {
+  //     max = salary;
+  //     maxName = name
+  //   }
+  // }
+  // console.log(maxName);
 </script>
