@@ -1482,13 +1482,40 @@
   // console.log(maxName);
 
   //Переместите первую букву каждого слова в его конец, затем добавьте «ау» в конец слова. Не трогайте знаки препинания.
-  function pigIt(str) {
-    let arrFromStr = str.split(' ');
-    let modifiedStr = arrFromStr.map(el => {
-      return el.substring(1, el.length) + el.substring(0, 1) + 'ay'
-    }).join(' ')
-    return modifiedStr;
+  // function pigIt(str) {
+  //   let arrFromStr = str.split(' ');
+  //   let modifiedStr = arrFromStr.map(el => {
+  //     return el.substring(1, el.length) + el.substring(0, 1) + 'ay'
+  //   }).join(' ')
+  //   return modifiedStr;
+  // }
+  // console.log(pigIt('Hello world'));
+  // console.log(pigIt('Pig latin is cool'));
+
+
+// function textCheck() {
+//   let defaultText = 'Идет сравнение данного текста, подождите!'
+//   let inp = document.querySelector('#newText').value
+//   console.log('Подождите, идет сравнение текста');
+//   setTimeout(() => {
+//     if(defaultText === inp) {
+//     console.log('Сравнение прошло успешно');
+//   } else {
+//     console.log('Текста не идентичны');
+//   }
+//   }, 1500)
+// }
+
+//Функция получающая url с параметром из массива по очереди, только после получения предыдущего
+
+let paramArr = [1, 2, 3, 4, 5, 6];
+function urlGenerator(domain) {
+  return function (url) {
+    for (i = 0; i < paramArr.length; i++) {
+      console.log(`${url}.${domain}?product=${paramArr[i]}`);
+    }
   }
-  console.log(pigIt('Hello world'));
-  console.log(pigIt('Pig latin is cool'));
+}
+const comUrl = urlGenerator('com');
+console.log(comUrl('example'));
 </script>
