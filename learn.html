@@ -1508,29 +1508,21 @@
 
   //Функция получающая url с параметром из массива по очереди, только после получения предыдущего
   function createDelay(ms) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve()
-      }, ms)
-    })
+    return new Promise(resolve => setTimeout(() => resolve(), ms))
   }
 
-  async function createUrl(arr) {
-    for (item of arr) {
-      await inputResponse(item)
-    }
-  }
-
-  async function inputResponse(item) {
+  async function inputResponse(arr) {
     try {
-      await createDelay(1000)
-      let response = await fetch(`https://example.com?param=${item}`)
-      let data = await response.json()
-      console.log(data)
+      for (item of arr) {
+        let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${item}`)
+        let data = await response.json()
+        console.log(data)
+        await createDelay(1000)
+      }
     } catch (error) {
       console.log(error)
     }
   }
 
-  createUrl([1, 2, 3, 4, 5, 6]).then(() => console.log('Все запросы отработали'))
+  inputResponse([1, 2, 3, 4, 5, 6]).then(() => console.log('Все запросы отработали'))
 </script>
