@@ -1597,10 +1597,10 @@
   // console.log(speedy.stomach); // apple
   // console.log(lazy.stomach); // []
 
-  let sum = 0;
-  function iterator(arr) {
-    arr.forEach(x => Array.isArray(x) ? iterator(x) : sum += x);
-    return sum;
-  }
-  console.log(iterator([1, 2, [2, 5, 3, [32, 5], 3], 7, 4]));
+  // let sum = 0;
+  // function iterator(arr) {
+  //   arr.forEach(x => Array.isArray(x) ? iterator(x) : sum += x);
+  //   return sum;
+  // }
+  // console.log(iterator([1, [2], [[], [{a: []}]]]));
 </script>
