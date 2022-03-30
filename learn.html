@@ -1768,7 +1768,7 @@
   
   // --LeetCode--
 
-  // Two sum
+  // Two sum //
   // function twoSum (nums, target) {
   //   for (let i = 0; i < nums.length - 1; i++) {
   //     for (let j = i + 1; j < nums.length; j++) {
@@ -1778,17 +1778,67 @@
   //     }
   //   }
   // };
-
   // console.log(twoSum([2, 7, 11, 15], 9));
 
 
-  // Add Two Numbers
-  function addTwoNumbers(l1, l2) {
-    let numOne = Number(l1.reverse().join(''))
-    let numTwo = Number(l2.reverse().join(''))
-    let result = String(numOne + numTwo).split('').reverse()
-    return result.map(x => +x);
-  }
-  console.log(addTwoNumbers([9,9,9,9,9,9,9], [9,9,9,9]))
+  // Add Two Numbers //
 
+  // function reverse(a) {
+  //   for (let l = 0, r = a.length - 1; l < r; ++l, --r) {
+  //     let temp = a[l];
+  //     a[l] = a[r];
+  //     a[r] = temp;
+  //   }
+  //   return a;
+  // }
+
+  // function addTwoNumbers(l1, l2) {
+  //   let numOne = Number(reverse(l1).join(''))
+  //   let numTwo = Number(reverse(l2).join(''))
+  //   let result = String(numOne + numTwo).split('').reverse()
+  //   return result.map(x => +x);
+  // }
+  // console.log(addTwoNumbers([2,4,3], [5,6,4]))
+
+
+  // Palindrome Number //
+
+  // function isPalindrome(x) {
+  //   let numToArrReverse = +(String(x).split('').reverse().join(''));
+  //   if(x === numToArrReverse) {
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
+  // console.log(isPalindrome(121));
+
+  // romanToInt //
+
+
+  //   const roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+  //   function romanToInt(S) {
+  //     let ans = 0
+  //     for (let i = S.length-1; ~i; i--) {
+  //       let num = roman[S.charAt(i)]
+  //       if (4 * num < ans) ans -= num
+  //       else ans += num
+  //     }
+  //     return ans
+  // };
+  // console.log(romanToInt('VX'));
+
+
+  // Longest Common Prefix //
+
+
+  function longestCommonPrefix(arr) {
+    if (arr.length === 0) return '';
+    let temp;
+    for (let i = 0; i < arr[0].length; i++) {
+      let curr = arr[0][i]
+    }
+    return temp;
+  }
+  longestCommonPrefix(["flower", "flow", "flight"])
 </script>
