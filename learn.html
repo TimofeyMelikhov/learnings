@@ -1813,20 +1813,34 @@
   // }
   // console.log(isPalindrome(121));
 
+
   // romanToInt //
 
-
-  //   const roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
-  //   function romanToInt(S) {
-  //     let ans = 0
-  //     for (let i = S.length-1; ~i; i--) {
-  //       let num = roman[S.charAt(i)]
-  //       if (4 * num < ans) ans -= num
-  //       else ans += num
+  // let map = {
+  //   I: 1,
+  //   V: 5,
+  //   X: 10,
+  //   L: 50,
+  //   C: 100,
+  //   D: 500,
+  //   M: 1000
+  // }
+  // function romanToInt(s) {
+  //   let resultInt = 0;
+  //   for (let i = 0; i < s.length; i++) {
+  //     console.log(resultInt)
+  //     if (map[s[i]] < map[s[i + 1]]) {
+  //       resultInt -= map[s[i]]
+  //     } else {
+  //       resultInt += map[s[i]]
   //     }
-  //     return ans
-  // };
-  // console.log(romanToInt('VX'));
+  //   }
+  //   return resultInt;
+  // }
+
+  // console.log(romanToInt('II'));
+  // console.log(romanToInt('V'));
+  // console.log(romanToInt('IX'));
 
 
   // Longest Common Prefix //
@@ -1874,17 +1888,20 @@
 
   // Remove Duplicates from Sorted Array //
 
-  function removeDuplicates(nums) {
-    for (let i = 0; i < nums.length; i++) {
-      let prevNum = nums[i];
-      if (nums[i] === nums[i - 1]) {
-        nums.splice(i, 1);
-        i--;
-      }
-        prevNum = nums[i];
-    }
-    return nums.length;
-  }
+  // function removeDuplicates(nums) {
+  //   for (let i = 0; i < nums.length; i++) {
+  //     let prevNum = nums[i];
+  //     if (nums[i] === nums[i - 1]) {
+  //       nums.splice(i, 1);
+  //       i--;
+  //     }
+  //       prevNum = nums[i];
+  //   }
+  //   return nums.length;
+  // }
 
-  console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
+  // console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
+
+
+  // Valid Parentheses //
 </script>
