@@ -2028,17 +2028,80 @@
 
   //replaceWords//
 
-  function replaceWords(dictionary, sentence) {
-    let arrFromSentence = sentence.split(' ')
-    for (let i = 0; i < arrFromSentence.length; i++) {
-      let char = arrFromSentence[i]
-      for (let j = 0; j < dictionary.length; j++) {
-        if (char.includes(dictionary[j])) {
-          arrFromSentence[i] = dictionary[j]
-        }
-      }
-    }
-    return arrFromSentence;
+  // function replaceWords(dictionary, sentence) {
+  //   let sortDict = dictionary.sort((a, b) => dictionary.a - dictionary.b)
+  //   let arrSentence = sentence.split(' ')
+  //   for (let i = 0; i < arrSentence.length; i++) {
+  //     for (let j = 0; j < sortDict.length; j++) {
+  //       if (arrSentence[i].startsWith(sortDict[j])) {
+  //         arrSentence[i] = sortDict[j]
+  //       }
+  //     }
+  //   }
+  //   return arrSentence.join(' ');
+  // }
+  // console.log(replaceWords(["a","b","c"], "aadsfasf absbs bbab cadsfafs"));
+
+
+  //Plus One//
+
+  // const plusOne = (digits) => {
+  //   let ans = BigInt(digits.join(''));
+  //   ans++;
+  //   return Array.from(ans.toString()).map(Number);
+  // };
+
+  // console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]))
+
+
+  // 125. Valid Palindrome //
+
+  // function isPalindrome(s) {
+  //   let strOne = s.toLowerCase().replace(/[^a-z0-9]/g, '')
+  //   console.log(strOne)
+  //   let strTwo = strOne.split('').reverse().join('')
+  //   if (strOne !== strTwo) {
+  //     return false
+  //   }
+  //   return true
+  // }
+
+  // console.log(isPalindrome("0P"))
+
+
+  // 121. Best Time to Buy and Sell Stock //
+
+  //   function maxProfit(prices) {
+  //     let minPrice = prices[0]
+  //     let maxProfit = 0;
+  //     for (let i = 0; i < prices.length; i++) {
+  //       let current = prices[i]
+        
+  //       if (current < minPrice) {
+  //         minPrice = current
+  //       }
+        
+  //       if (current - minPrice > maxProfit) {
+  //         maxProfit = current - minPrice
+  //       }
+  //     }
+  //     return maxProfit
+  //   };
+
+  // console.log(maxProfit([7,1,5,3,6,4]))
+
+
+  // 136. Single Number //
+
+  function singleNumber(nums) {
+    if (nums.length === 1) return nums[0]
+    let store = nums.reduce((acc, item) => {
+      acc[item] = (acc[item] || 0) + 1
+      return acc
+    }, {})
+    let singleNum = Object.keys(store).filter(key => store[key] === 1).join()
+    return Number(singleNum)
   }
-  console.log(replaceWords(["cat","bat","rat"], "the cattle was rattled by the battery"));
+
+  console.log(singleNumber([2, 2, 1]));
 </script>
